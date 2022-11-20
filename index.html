@@ -101,13 +101,22 @@
                 <h2 class="what-do-title">Чим ми займаємося</h2>
                 <ul class="what-do-list">
                     <li class="what-do-item">
-                        <img src="./images/box_1.jpg" alt="Чоловічі руки щось кодують" width="370">
+                        <div class="what-do-item-wrap">
+                            <img src="./images/box_1.jpg" alt="Чоловічі руки щось кодують" width="370">
+                            <p class="what-do-description">Десктопні додатки</p>
+                        </div>
                     </li>
                     <li class="what-do-item">
-                        <img src="./images/box_2.jpg" alt="Жінка тримає телефон та клацає ноутбук" width="370">
+                        <div class="what-do-item-wrap">
+                            <img src="./images/box_2.jpg" alt="Жінка тримає телефон та клацає ноутбук" width="370">
+                            <p class="what-do-description">Мобільні додатки</p>
+                        </div>
                     </li>
                     <li class="what-do-item">
-                        <img src="./images/box_3.jpg" alt="Графічний планшет у руках" width="370">
+                        <div class="what-do-item-wrap">
+                            <img src="./images/box_3.jpg" alt="Графічний планшет у руках" width="370">
+                            <p class="what-do-description">Дизайнерські рішення</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -372,10 +381,10 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden">
-        <div class="modal" data-modal>
-            <button type="button" class="modal-close" data-modal-close>
-                <svg class="modal-order-service" width="11px" hight="11px">
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close button" data-modal-close>
+                <svg class="modal-order-service" width="11" height="11">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
