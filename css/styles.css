@@ -732,7 +732,9 @@ where 60px = 2(amount of margins = n-1) * 30px(margins)
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms linear;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
 }
 
 .modal-close{
