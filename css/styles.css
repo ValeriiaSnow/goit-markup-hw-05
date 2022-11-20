@@ -3,6 +3,7 @@
     --title-color: #212121;
     --text-color: #757575;
     --clear-white: #FFFFFF;
+    --type-of-show: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*   ------------------------------  STUDIO ----------------------  */
 /* 0 ------------------ smth main */
@@ -639,4 +640,92 @@ where 60px = 2(amount of margins = n-1) * 30px(margins)
 .type-work-photo-list .type-work-photo-link:hover,
 .type-work-photo-list .type-work-photo-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* hidden description */
+.type-work-photo-wrap{
+    /* i need it for hidden description */
+    position: relative;
+    overflow: hidden;
+}
+
+.type-work-photo-description{
+    position: absolute;
+    top: 0;
+    background: rgba(33, 150, 243, 0.9);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--clear-white);
+    padding: 63px 24px;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: var(--type-of-show);
+    /* but i can also use overflow: scroll; */
+    overflow: auto;
+}
+
+.type-work-photo-item:hover .type-work-photo-description{
+    transform: translateY(0);
+}
+
+
+
+/* ------------------------ MODAL ---------------*/
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: var(--type-of-show);
+    transition-property: visibility;
+    transition-duration: 250ms;
+    transition-timing-function: var(--type-of-show);
+}
+
+.modal{
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    /* for center start */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* for center end */
+    background: var(--clear-white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+.modal-close{
+    position: absolute;
+    display: flex;
+    right: 8px;
+    top: 8px;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--clear-white);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.backdrop .is-hidden .modal{
+    transform: translate(-50%, -50%) scaleY(1.5);
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
