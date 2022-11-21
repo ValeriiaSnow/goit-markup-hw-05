@@ -157,6 +157,11 @@ img{
     color: var(--accent-color);
 }
 
+.site-nav .link{
+    transition: color 250ms var(--type-of-show);
+}
+
+
 .mail-tel .link {
     color: var(--text-color);
 }
@@ -164,6 +169,10 @@ img{
 .mail-tel .link:hover,
 .mail-tel .link:focus {
     color: var(--accent-color);
+}
+
+.mail-tel .link{
+    transition: color 250ms var(--type-of-show);
 }
 
 .site-nav .link.current{
@@ -234,6 +243,12 @@ img{
     color: var(--accent-color);
 }
 
+.address-item-mail-tel .link,
+.address-item-address .link{
+    transition: color 250ms var(--type-of-show);
+}
+
+
 .address-item-address .link {
     color: var(--clear-white);
 }
@@ -300,6 +315,12 @@ img{
 .join-link:focus .join-icon{
     fill: #FFFFFF;
 } 
+
+.join-icon,
+.join-link{
+    transition: background-color 250ms var(--type-of-show),
+    fill 250ms var(--type-of-show);
+}
 
 /* 3 ------------------------------ MAIN = Studio */
 /* section 1  hero */
@@ -521,13 +542,20 @@ img{
     background-color: #2196F3;
 }
 
+.team-social-link{
+    transition: background-color 250ms var(--type-of-show);
+}
+
 .team-social-link:hover .team-social-icon,
 .team-social-link:focus .team-social-icon{
     fill: #FFFFFF;
 } 
 
-/* section 5 clients*/
+.team-social-icon{
+    transition: fill 250ms var(--type-of-show);
+}
 
+/* section 5 clients*/
 .clients-title{
     font-weight: 700;
     font-size: 36px;
@@ -573,9 +601,17 @@ img{
     border-color: #2196F3;
 }
 
+.clients-item-link{
+    transition: border-color 250ms var(--type-of-show);
+}
+
 .clients-item-link:hover .clients-item-icon,
 .clients-item-link:focus .clients-item-icon{
     fill: #2196F3;
+}
+
+.clients-item-icon{
+    transition: fill 250ms var(--type-of-show);
 }
 
 /* 3 ------------------------------ MAIN = Portfolio */
@@ -601,6 +637,13 @@ img{
     border: none;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+}
+
+.type-work-list .button{
+    transition: background-color 250ms var(--type-of-show),
+    color 250ms var(--type-of-show),
+    box-shadow 250ms var(--type-of-show),
+    border-radius 250ms var(--type-of-show);
 }
 
 .type-work-list .button {
@@ -675,6 +718,10 @@ where 60px = 2(amount of margins = n-1) * 30px(margins)
 .type-work-photo-list .type-work-photo-link:hover,
 .type-work-photo-list .type-work-photo-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.type-work-photo-list .type-work-photo-link{
+    transition: box-shadow 250ms var(--type-of-show);
 }
 
 /* hidden description */
